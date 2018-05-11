@@ -12,7 +12,10 @@ map - :Explore<cr>
 iab rhs # Richard Hamel-Smith - !!datekJo#===================================================hi
 iab teh the
 iab hte the
- 
+
+" settings for Yaml files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " abbreviation to convert the keyword GRID to a CSS table inside a PHP file
 autocmd FileType php iab grid <div class=\"grid\" style=\"width:100%\"><Tab><div class=\"gr\"><Tab><Tab><div class=\"gh\"></div><BS><BS></div><!-- end GR --><div class=\"gr\"><Tab><Tab><div class=\"gd\"></div><BS><BS></div><!-- end GR --><BS></div><!-- end GRID -->
 
@@ -42,9 +45,9 @@ set autoindent
 " invoke folding with zM
 " open all folds with zR
 " toggle an individual fold with za
-setlocal foldmethod=indent
-nnoremap <Space> za
-vnoremap <Space> za
+" setlocal foldmethod=indent
+" nnoremap <Space> za
+" vnoremap <Space> za
 
 " useful for python, apparently the standard is 4 spaces for idents
 au Filetype python setl et ts=4 sw=4 smartindent softtabstop=4
@@ -85,9 +88,11 @@ autocmd FileType twiki inoremap <F5> A</font>
 "https://en.wikibooks.org/wiki/Editing_Wikitext/Preformatted_Text
 
 "for code snippets, etc. in Twiki
-autocmd FileType twiki map <F6> I<details><summary><b>Click here for Code</b></summary><pre style="white-space:pre-wrap;border:1px solid lightgrey;background:black;color:#00FF00;font-weight:bold;">oI</pre></details>okki
-
 autocmd FileType twiki inoremap <F6> I<details><summary><b>Click here for Code</b></summary><pre style="white-space:pre-wrap;border:1px solid lightgrey;background:black;color:#00FF00;font-weight:bold;">oI</pre></details>okki
+autocmd FileType twiki map <F6> I<details><summary><b>Click here for Code</b></summary><pre style="white-space:pre-wrap;border:1px solid lightgrey;background:black;color:#00FF00;font-weight:bold;">oI</pre></details>okki
+autocmd FileType twiki map <S-F6> I<pre style="white-space:pre-wrap;border:1px solid lightgrey;background:black;color:#00FF00;font-weight:bold;">oI</pre>okki
+autocmd FileType twiki inoremap <S-F6> I<pre style="white-space:pre-wrap;border:1px solid lightgrey;background:black;color:#00FF00;font-weight:bold;">oI</pre>okki
+
 "for emails, etc
 "map <F7> I<pre style="white-space:pre-wrap;width:50%;border:1px solid lightgrey;background:ivory;color:blue;">oI</pre>okki
 autocmd FileType twiki map <F7> <Esc>ebi*<Esc>ea*<Esc>
@@ -163,7 +168,8 @@ nnoremap _ f<Space>x~
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set textwidth=0
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme bclear
 colorscheme hemisu
 cmap w!! w !sudo tee > /dev/null %<CR>
 nnoremap <bs> <c-^>
