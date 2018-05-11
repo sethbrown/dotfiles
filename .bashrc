@@ -18,7 +18,7 @@ export HISTTIMEFORMAT="%a %d %h %Y - %H:%M:%S "
 alias h=history
 
 export PS1='\@:\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
-export PATH=/home/rhamel/bin:/home/rhamel/bin/ssvnc:/bin:/usr/local/bin:/usr/bin:/usr/lib/java/bin:/usr/lib/qt/bin:.
+export PATH=$HOME/bin:$HOME/bin/ssvnc:/bin:/usr/local/bin:/usr/bin:/usr/lib/java/bin:/usr/lib/qt/bin:.
 export PATH=$PATH:/usr/java/jre1.7.0_51/bin:/usr/local/pgsql/bin:/opt/libreoffice6.0/program/
 export VNC_VIA_CMD='/usr/bin/ssh -2 -x -p 2013 -l root -f -L %L:%H:%R %G sleep 20'
 #
