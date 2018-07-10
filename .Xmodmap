@@ -1,15 +1,12 @@
-!.Xmodmap file
-!
-!fix for my Logitech Marble Mouse
-!pointer = default
+! change buttons around for my Logitech Marble Mouse
 pointer = 9 8 1 4 5 6 7 3 2 
-!
-! Swap Caps_Lock and Control_L
-!
-!remove Lock = Caps_Lock
-!remove Control = Control_L
-!keysym Control_L = Caps_Lock
-!keysym Caps_Lock = Control_L
-!add Lock = Caps_Lock
-!add Control = Control_L
 
+! change Home to Backspace for my little USB keyboard
+keycode 110 = BackSpace
+keycode 127 = Home
+
+! change Caps_Lock to Esc
+keycode 66 = Escape NoSymbol Escape
+
+! change Right Alt key to Control_R
+keycode 134 = Escape NoSymbol Escape
