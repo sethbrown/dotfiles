@@ -1,0 +1,76 @@
+alias h=history
+alias r='rsync -Pv'
+alias mv='mv -i'
+alias cp='cp -i'
+alias halt='sudo /sbin/halt'
+alias reboot='sudo /sbin/reboot'
+alias g=grep
+alias grep='grep --color'
+alias pgrep='pgrep -lfa'
+alias vi=vim
+alias vb='vi ~/.bash_aliases;source ~/.bash_aliases'
+alias ls='ls -l --color --group-directories-first'
+alias lr='ls -lrt'
+alias lS='ls -lrS --group-directories-first'
+alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
+alias df='df -Tm -x tmpfs -x devtmpfs'
+alias dmesg='sudo dmesg --human'
+alias xterm='xterm -geometry 1024x768+0+ -fg green -bg black -font *-fixed-*-*-*-*-20-*'
+
+
+# some networking aliases
+alias myip='wget -c -O - -q icanhazip.com'
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias tm='sudo tailf /var/log/messages'
+alias ifc='echo "Network Interfaces";echo "==========================================";nmap --iflist|grep -v "::"|grep up;echo "=========================================="'
+alias ifc='nmap --iflist|grep -v "::"|grep up'
+alias goo='ping www.google.com'
+alias check='nmap -sP 192.168.1.0/24|grep --color scan'
+alias chk='nmap -sP 192.168.10.*'
+alias p=ping
+alias p8='ping 8.8.8.8'
+alias ip=/sbin/ip
+alias ifconfig=/sbin/ifconfig
+alias route=/sbin/route
+alias netstat='sudo watch -n5 netstat -natp'
+# start vpn if not running
+alias up='sudo /etc/rc.d/rc.openvpn start; sleep 5; ifc'
+
+# some ssh aliases
+alias vbx='ssh -Y   helen /opt/VirtualBox/VirtualBox'
+alias admin='ssh    admin'
+alias pi='ssh       pi@pi'
+alias odoo='ssh     odoo'
+alias odd='ssh      odoo'
+alias odu='ssh      odoo'
+
+alias webshare="python -m SimpleHTTPServer 8656"
+alias cx='cryptmount crypt'
+alias ux='cryptmount -u crypt'
+alias atop='watch -n 3 -d "df -Tm -x tmpfs -x devtmpfs;echo;free; echo; uptime; echo;echo "logged on";echo; who ;echo;echo "running";echo;ps aux  --sort=-%cpu | head -n 11"'
+alias installpkg='sudo /sbin/installpkg '
+alias upgradepkg='sudo /sbin/upgradepkg '
+alias via='vncviewer -via '
+#alias rt=rtorrent
+#alias drip='HandBrakeCLI -L -i /dev/hdc -o '
+#alias z=zoiper
+#alias kz='killall zoiper'
+alias scr='screen -r || screen'
+alias open=xdg-open
+alias o=xdg-open
+alias zl='zipinfo -M '
+alias py=python
+
+# git aliases
+alias git-list='git ls-files'
+alias ga='git-add'
+alias gc='git-commit'
+alias gca='git-commit -v -a'
+alias gcam='git-commit --amend -v'
+alias gd='git-diff'
+alias git-list='git ls-files'
+alias git-setup='git init && git add . && git commit -m "Initial Commit"'
+alias gl='git log'
+alias gll='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+alias gs='git status'
+
